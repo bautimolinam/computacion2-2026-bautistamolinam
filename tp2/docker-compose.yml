@@ -1,0 +1,17 @@
+services:
+  api:
+    build: .
+    container_name: tp2-tareas
+    ports:
+      - "8000:8000"
+    environment:
+      WORKERS: "10"          # corrutinas consumidoras de la cola
+      CPU_WORKERS: "0"       # procesos para hashear (0 = cantidad de CPUs)
+      COLA_MAX: "10000"      # tamaño máximo de la cola (backpressure -> 429)
+      TIMEOUT_DEFAULT: "60"  # segundos, si la tarea no trae timeout
+      LIMITE_APAGADO: "10"   # cuánto esperar a las tareas en curso al apagar
+      LOG_LEVEL: "INFO"
+    volumes:
+      - ./datos:/app/datos   # los estado_<timestamp>.json quedan en el host
+    # Más que LIMITE_APAGADO: si no, Docker manda SIGKILL antes del volcado.
+    stop_grace_period: 30s

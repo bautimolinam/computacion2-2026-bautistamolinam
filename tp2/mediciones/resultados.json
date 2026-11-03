@@ -1,0 +1,175 @@
+{
+  "fecha": "2026-11-03 03:22:06",
+  "base": "http://127.0.0.1:8000",
+  "cpu_host": 2,
+  "m1": {
+    "fuente": "endpoint /lento (demoras de 0.2 a 1.1 s, 50 KB c/u)",
+    "corridas": [
+      {
+        "secuencial": 13.0961,
+        "secuencial_ok": 20,
+        "secuencial_mas_lenta": 1.1028,
+        "secuencial_suma": 13.064,
+        "concurrente": 1.1338,
+        "concurrente_ok": 20,
+        "concurrente_mas_lenta": 1.1196,
+        "concurrente_suma": 13.27,
+        "speedup": 11.55
+      },
+      {
+        "secuencial": 13.0646,
+        "secuencial_ok": 20,
+        "secuencial_mas_lenta": 1.1023,
+        "secuencial_suma": 13.044,
+        "concurrente": 1.1292,
+        "concurrente_ok": 20,
+        "concurrente_mas_lenta": 1.1132,
+        "concurrente_suma": 13.263,
+        "speedup": 11.57
+      },
+      {
+        "secuencial": 13.0578,
+        "secuencial_ok": 20,
+        "secuencial_mas_lenta": 1.1019,
+        "secuencial_suma": 13.044,
+        "concurrente": 1.1283,
+        "concurrente_ok": 20,
+        "concurrente_mas_lenta": 1.1137,
+        "concurrente_suma": 13.267,
+        "speedup": 11.57
+      }
+    ],
+    "speedup_promedio": 11.56
+  },
+  "m2": {
+    "iteraciones": 6000000,
+    "sin_carga": {
+      "n": 38,
+      "promedio_ms": 2.67,
+      "mediana_ms": 2.74,
+      "p95_ms": 3.09,
+      "max_ms": 3.58
+    },
+    "bloqueante": {
+      "n": 2,
+      "promedio_ms": 1881.49,
+      "mediana_ms": 1881.49,
+      "p95_ms": 2.49,
+      "max_ms": 3760.49,
+      "duracion_hash": 3.759,
+      "total_pared": 3.866
+    },
+    "hilo": {
+      "n": 60,
+      "promedio_ms": 10.68,
+      "mediana_ms": 12.62,
+      "p95_ms": 15.97,
+      "max_ms": 16.96,
+      "duracion_hash": 3.5945,
+      "total_pared": 3.677
+    },
+    "executor": {
+      "n": 69,
+      "promedio_ms": 2.59,
+      "mediana_ms": 2.41,
+      "p95_ms": 3.43,
+      "max_ms": 4.91,
+      "duracion_hash": 3.5591,
+      "total_pared": 3.682
+    }
+  },
+  "m3": {
+    "workers": 10,
+    "procesos_cpu": 2,
+    "io": [
+      {
+        "k": 1,
+        "segundos": 1.023,
+        "teorico": 1.0
+      },
+      {
+        "k": 5,
+        "segundos": 1.021,
+        "teorico": 1.0
+      },
+      {
+        "k": 10,
+        "segundos": 1.03,
+        "teorico": 1.0
+      },
+      {
+        "k": 11,
+        "segundos": 2.011,
+        "teorico": 2.0
+      },
+      {
+        "k": 20,
+        "segundos": 2.022,
+        "teorico": 2.0
+      },
+      {
+        "k": 40,
+        "segundos": 4.061,
+        "teorico": 4.0
+      },
+      {
+        "k": 80,
+        "segundos": 8.135,
+        "teorico": 8.0
+      },
+      {
+        "k": 160,
+        "segundos": 16.076,
+        "teorico": 16.0
+      }
+    ],
+    "cpu": [
+      {
+        "k": 1,
+        "segundos": 0.91
+      },
+      {
+        "k": 2,
+        "segundos": 1.011
+      },
+      {
+        "k": 4,
+        "segundos": 1.88
+      },
+      {
+        "k": 8,
+        "segundos": 3.993
+      },
+      {
+        "k": 16,
+        "segundos": 7.743
+      }
+    ],
+    "api": [
+      {
+        "tareas_en_memoria": 367,
+        "post_por_segundo": null,
+        "estadisticas_ms": 1.8,
+        "listar_todo_ms": 9.1
+      },
+      {
+        "tareas_en_memoria": 1367,
+        "post_por_segundo": 708,
+        "estadisticas_ms": 2.6,
+        "listar_todo_ms": 32.1
+      },
+      {
+        "tareas_en_memoria": 6367,
+        "post_por_segundo": 766,
+        "estadisticas_ms": 7.2,
+        "listar_todo_ms": 162.7
+      },
+      {
+        "tareas_en_memoria": 26367,
+        "post_por_segundo": 658,
+        "estadisticas_ms": 20.7,
+        "listar_todo_ms": 578.3
+      }
+    ]
+  }
+}
